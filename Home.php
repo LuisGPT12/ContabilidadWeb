@@ -39,9 +39,9 @@
             </div>
         </div>
     </main>
-   <br><br>
+   <div class="centrar">
    <button class="btn" onclick="location.href='excel.php'">Excel</button>
-    <?php include 'footer.php'; ?>
-
-</body>
+    </div>
+   <?php include 'footer.php'; ?>
+</body> 
 </html>

@@ -44,9 +44,9 @@
    
         <h2>ESTADO DE RESULTADOS</h2>
         <h2>Ingresos</h2>
-        Venta de la APP
+        subscripcion anual de la APP
         <input type="number" name="VentaApp" value="1200" required>
-        Venta módulo de la API (incluyendo BD)
+        subscripcion anual del módulo de la API (incluyendo BD)
         <input type="number" name="VentaAPI" value="300" required>
 
         <h2>Costos</h2>
@@ -172,6 +172,9 @@
         `;
     };
 </script>
+ <div class="centrar">
+   <button class="btn" onclick="location.href='home.php'">Volver</button>
+    </div>
 
     <?php include 'footer.php'; ?>
 </body>
