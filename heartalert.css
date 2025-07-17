@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #e9f7fc url('fondo_medico.png') no-repeat center fixed;
+    background-size: cover;
+    color: #000;
+}
+
+.navbar {
+    position: relative;
+    background-color: #b3e5fc;
+    padding: 10px 20px;
+    height: 50px;
+}
+
+.menu-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.logo {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 6px; 
+    color: #000;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 30px;
+    color: #333;
+}
+
+.alert-card {
+    background-color: #d0f0ff;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.patient-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.patient-icon {
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+.alert-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+hr {
+    border: 1px solid #888;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #b3e5fc;
+    text-align: center;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+ body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: #e9f7fc;
+            color: #000;
+        }
+
+        header {
+            background-color: #b3e5fc;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #01579b;
+        }
+
+        form {
+            background-color: #ffffffd9;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        form h2 {
+            color: #01579b;
+            margin-top: 40px;
+            border-bottom: 2px solid #b3e5fc;
+            padding-bottom: 5px;
+        }
+
+        input[type="number"],
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px;
+            border: 1px solid #b0bec5;
+            border-radius: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            background-color: #f5f5f5;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #0288d1;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0277bd;
+        }
+
+        .add-btn {
+            background-color: #26a69a;
+            margin-top: 10px;
+        }
+
+        .add-btn:hover {
+            background-color: #1e8e7d;
+        }
+
+        .extra-item {
+            background-color: #e0f7fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .extra-item input[type="text"],
+        .extra-item input[type="number"] {
+            flex: 1;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            border: 1px solid #b0bec5;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #b3e5fc;
+            color: #01579b;
+        }
+
+        #resultados {
+            max-width: 1000px;
+            margin: 40px auto;
+            background-color: #ffffffd9;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 600px) {
+            .extra-item {
+                flex-direction: column;
+            }
+        }
