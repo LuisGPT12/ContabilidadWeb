@@ -12,66 +12,66 @@
       <h2>BALANCE GENERAL</h2>
         <h2>Activos Corriente</h2>
         Caja
-        <input type="number" name="Caja" value="50" required>
+        <input type="number" name="Caja" value="50.00" required>
         Banco
-        <input type="number" name="Banco" value="100" required>
+        <input type="number" name="Banco" value="100.00" required>
         Inventarios
-        <input type="number" name="Inventarios" value="70" required>
+        <input type="number" name="Inventarios" value="70.00" required>
 
         <h2>Activos No Corriente</h2>
         Equipos de Cómputo
-        <input type="number" name="EquiposComputo" value="2430" required>
+        <input type="number" name="EquiposComputo" value="2430.00" required>
         Activos intangibles (Licencia y prototipo)
-        <input type="number" name="Intangibles" value="1630" required>
+        <input type="number" name="Intangibles" value="1630.00" required>
 
         <h2>Pasivos Corriente</h2>
         Cuentas por Pagar
-        <input type="number" name="CuentasPagar" value="125" required>
+        <input type="number" name="CuentasPagar" value="125.00" required>
 
         <h2>Pasivos No Corriente</h2>
         Préstamos
-        <input type="number" name="Prestamos" value="400" required>
+        <input type="number" name="Prestamos" value="400.00" required>
 
         <h2>Capital/Patrimonio</h2>
         Capital
-        <input type="number" name="Capital" value="125" required>
+        <input type="number" name="Capital" value="3755.00" required>
         Aporte UTP (académico e institucional)
-        <input type="number" name="AporteUTP" value="0" required>
-        Aporte de la especie (Horas trabajadas)
-        <input type="number" name="AporteEspecie" value="2430" required>
+        <input type="number" name="AporteUTP" value="0.00" required>
         Desarrollo del equipo
-        <input type="number" name="DesarrolloEquipo" value="1200" required>
+        <input type="number" name="DesarrolloEquipo" value="1200.00" required>
    
         <h2>ESTADO DE RESULTADOS</h2>
         <h2>Ingresos</h2>
         subscripcion anual de la APP
-        <input type="number" name="VentaApp" value="1200" required>
+        <input type="number" name="VentaApp" value="1200.00" required>
         subscripcion anual del módulo de la API (incluyendo BD)
-        <input type="number" name="VentaAPI" value="300" required>
+        <input type="number" name="VentaAPI" value="300.00" required>
 
         <h2>Costos</h2>
         Componentes Tecnológicos
-        <input type="number" name="ComponentesTec" value="40" required>
+        <input type="number" name="ComponentesTec" value="40.00" required>
         Servicios Digitales
-        <input type="number" name="ServiciosDigitales" value="45" required>
+        <input type="number" name="ServiciosDigitales" value="45.00" required>
         Tiempos de prueba
-        <input type="number" name="TiemposPrueba" value="200" required>
+        <input type="number" name="TiemposPrueba" value="200.00" required>
 
         <h2>Gastos</h2>
         Gastos de usabilidad
-        <input type="number" name="Usabilidad" value="15" required>
+        <input type="number" name="Usabilidad" value="15.00" required>
         Luz
-        <input type="number" name="Luz" value="250" required>
+        <input type="number" name="Luz" value="250.00" required>
         Internet
-        <input type="number" name="Internet" value="470" required>
+        <input type="number" name="Internet" value="470.00" required>
         Banner
         <input type="number" name="Banner" value="16.4" required>
         Entrevista Cardiólogo
-        <input type="number" name="Cardiologo" value="80" required>
+        <input type="number" name="Cardiologo" value="80.00" required>
+         Honorarios profesionales
+        <input type="number" name="honorarios" value="1600.00" required>
 
         <h2>Gastos Extraordinarios</h2>
         Pérdidas por desastre
-        <input type="number" name="GastoExtra" value="100" required>
+        <input type="number" name="GastoExtra" value="100.00" required>
 
         <br><br>
         <button type="submit">Calcular</button>
@@ -90,7 +90,6 @@
         const inventarios = +f.Inventarios.value;
         const equipos = +f.EquiposComputo.value;
         const intangibles = +f.Intangibles.value;
-
         const activos_corr = caja + banco + inventarios;
         const activos_nocorr = equipos + intangibles;
         const total_activos = activos_corr + activos_nocorr;
@@ -106,16 +105,15 @@
         // Patrimonio
         const capital = +f.Capital.value;
         const aporteUTP = +f.AporteUTP.value;
-        const aporteEspecie = +f.AporteEspecie.value;
         const desarrollo = +f.DesarrolloEquipo.value;
 
-        const total_patrimonio = capital + aporteUTP + aporteEspecie + desarrollo;
+        const total_patrimonio = capital + aporteUTP + desarrollo;
         const total_pasivos_patrimonio = total_pasivos + total_patrimonio;
 
         // Estado de resultados
         const ingresos = +f.VentaApp.value + +f.VentaAPI.value;
         const costos = +f.ComponentesTec.value + +f.ServiciosDigitales.value + +f.TiemposPrueba.value;
-        const gastos = +f.Usabilidad.value + +f.Luz.value + +f.Internet.value + +f.Banner.value + +f.Cardiologo.value;
+        const gastos = +f.Usabilidad.value + +f.Luz.value + +f.Internet.value + +f.Banner.value + +f.Cardiologo.value + +f.honorarios.value;
         const gastos_extra = +f.GastoExtra.value;
 
         const utilidad_bruta = ingresos - costos;
@@ -152,7 +150,6 @@
             <ul>
                 <li>Capital: ${capital}</li>
                 <li>Aporte UTP: ${aporteUTP}</li>
-                <li>Aporte en Especie: ${aporteEspecie}</li>
                 <li>Desarrollo del equipo: ${desarrollo}</li>
             </ul>
             <p><strong>Total Patrimonio: ${total_patrimonio}</strong></p>
